@@ -1,23 +1,112 @@
 body {
     background-color: rgb(25, 25, 25);
     color: white;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-.move-icon{
-    height: 50px;
+/* Game title */
+h2 {
+    font-size: 32px;
 }
 
-.move-button{
+/* Game buttons */
+.move-button {
     width: 120px;
     height: 120px;
     border-radius: 60px;
     border: 3px solid white;
     background-color: transparent;
-    margin-right: 10px;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
 }
-.js-result{
+
+.move-button:hover {
+    transform: scale(1.1);
+}
+
+/* Icons inside buttons */
+.move-icon {
+    height: 50px;
+}
+
+/* Score result text */
+.js-result {
     font-size: 25px;
     font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Score display */
+.js-score {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* Game moves display */
+.js-moves {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Reset message */
+.reset-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    gap: 10px; /* Adds space between text and buttons */
+}
+/* Button spacing */
+.game-btn {
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .move-button {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+    }
+    .move-icon {
+        height: 40px;
+    }
+    .js-result {
+        font-size: 22px;
+    }
+    .js-score {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .move-button {
+        width: 90px;
+        height: 90px;
+        border-radius: 45px;
+    }
+    .move-icon {
+        height: 35px;
+    }
+    .js-result {
+        font-size: 18px;
+    }
+    .js-score {
+        font-size: 14px;
+    }
+    .reset-message {
+        flex-direction: column;
+    }
+    .reset-message button {
+        width: 100px; /* Ensures consistent button size */
+        margin: 5px 0; /* Adds space between buttons */
+    }
 }
