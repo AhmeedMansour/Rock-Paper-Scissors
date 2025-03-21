@@ -16,17 +16,17 @@
 
       <div class="row my-4 w-100 justify-content-center">
         <div class="col-3 col-md-2 d-flex justify-content-center"> 
-          <button class="move-button" onclick="playGame('rock')">
+          <button class="move-button js-rock-button" >
             <img src="./images/rock-emoji.png" class="move-icon img-fluid" alt="rock">
           </button>
         </div>
         <div class="col-3 col-md-2 d-flex justify-content-center">
-          <button class="move-button" onclick="playGame('paper')">
+          <button class="move-button js-paper-button" >
             <img src="./images/paper-emoji.png" class="move-icon img-fluid" alt="paper">
           </button>
         </div>
         <div class="col-3 col-md-2 d-flex justify-content-center">
-          <button class="move-button" onclick="playGame('scissors')">
+          <button class="move-button js-scissors-button" >
             <img src="./images/scissors-emoji.png" class="move-icon img-fluid" alt="scissors">
           </button>
         </div>
@@ -42,8 +42,10 @@
         <p class="js-score"></p>
       </div>
 
-      <div class="reset-btn">
-        <button onclick="resetScore()" class="btn btn-danger">Reset Score</button>
+      <div class="game-btn">
+        <button  class="btn btn-danger js-reset-button">Reset Score</button>
+        <button  class="btn btn-primary  js-play-button">Auto Play</button>
+        <p class="mt-4 reset-message opacity-0">Are you sure you want to Reset the Score? <button class="btn btn-success js-reset-yes-button mx-2 "> Yes</button>  <button class="btn btn-danger js-reset-no-button ">No </button>  </p>
       </div>
     </div>
   </div>
